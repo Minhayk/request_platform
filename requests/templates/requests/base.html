@@ -1,0 +1,55 @@
+{% load staticfiles %}
+        <head>
+        <title>Պահանջագրեր</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/requests.css' %}">
+    </head>
+    <body>
+
+    <div>
+        <h1> ՍԵՖ Ինտերնեյշնլ ՈՒՎԿ-ի պահանջագրերի հաստատման հարթակ </h1>
+        <table class="table-head">
+            <td>
+      <th class="th_1"><h1><a href="{% url 'request_new' %}" class="th_1">Նոր պահանջագիր</a></h1>
+          </th>
+    </td>
+
+         <td>
+      <th class="th_1"><h1><a href="{% url 'app_request_list' %}" class="th_1">Հաստատված պահանջագրեր</a></h1>
+          </th>
+    </td>
+  <td>
+      <th class="th_1"><h1><a href="{% url 'rej_request_list' %}" class="th_1">Մերժված պահանջագրեր</a></h1>
+          </th>
+    </td>
+  <td>
+      <th class="th_1"><h1><a href="{% url 'cur_request_list' %}" class="th_1">Ընթացիկ պահանջագրեր</a></h1>
+          </th>
+    </td>
+            <td>
+      <th class="th_1"><h1>
+          <a href="{% url 'admin:index' %}" class="th_1">Մուտք հարթակ/կարգավորումներ</a>
+          </h1>
+          </th>
+    </td>
+        </table>
+        </div>
+
+
+    <div >
+
+
+
+            {% block content %}
+<div >
+
+<p class="dashboard">Հարթակում ներկայացված են գործող, հաստատված և մերժված բոլոր պահանջագրերը: <br>
+    Հարթակից օգտվելու համար հարկավոր է մուտք գործել Ձեր outlook-ի տվյալներով:</p>
+
+</div>
+            {% endblock %}
+            </div>
+    </body>
+

@@ -1,0 +1,26 @@
+{% extends 'requests/base.html' %}
+{% block content %}
+
+<table class="table-bottom">
+  <tr class="tr_1">
+    <th>Անվանում</th>
+    <th>Քանակ</th>
+    <th>Գին</th>
+    <th>Ստորաբաժանում</th>
+    <th>Ստեղծման ամսաթիվ</th>
+    <th>Մեկնաբանություն</th>
+
+  </tr>
+    {% for request in cur_requests%}
+        <tr>
+
+            <td  class="td_1"> <h1><a href="{% url 'request_detail' pk=request.pk %}" class="td_1">{{ request.product_name }}</a></h1></td>
+            <td>{{ request.product_quantity }}</td>
+            <td>{{ request.product_price }}</td>
+            <td>{{ request.Division}}</td>
+            <td>{{ request.created_date }}</td>
+            <td>{{ request.comment }}</td>
+
+        </tr>
+    {% endfor %}
+{% endblock content %}

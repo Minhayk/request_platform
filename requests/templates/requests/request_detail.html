@@ -1,0 +1,75 @@
+{% extends 'requests/base.html' %}
+
+{% block content %}
+
+    <table class="table-bottom">
+
+        <tr class="tr_1">
+        <td class="td_2">Պահանջագրի համար</td>
+        <td>{{ Assembled_request.pk }}</td>
+        </tr>
+
+    <tr class="tr_1">
+        <td class="td_2">Անվանում</td>
+        <td>{{ Assembled_request.product_name}}</td>
+        </tr>
+<tr class="tr_1">
+        <td class="td_2">Նպատակ</td>
+        <td>{{ Assembled_request.purchase_purpose }}</td>
+        </tr>
+<tr class="tr_1">
+        <td class="td_2">Պահանջագրի տեսակ</td>
+        <td>{{ Assembled_request.request_type_id }}</td>
+        </tr>
+<tr class="tr_1">
+        <td class="td_2">Գին</td>
+        <td >{{ Assembled_request.product_price }}</td>
+        </tr>
+<tr class="tr_1">
+        <td class="td_2">Քանակ</td>
+        <td>{{ Assembled_request.product_quantity }}</td>
+        </tr>
+<tr class="tr_1">
+        <td class="td_2">Ստորաբաժանում</td>
+        <td>{{ Assembled_request.Division }}</td>
+        </tr>
+
+ <tr class="tr_1">
+        <td class="td_2">Պահանջագիր ներկայացնող</td>
+        <td>{{ Assembled_request.Initiator }}</td>
+        </tr>
+ <tr class="tr_1">
+        <td class="td_2">Ստեղծման ամսաթիվ</td>
+        <td>{{ Assembled_request.created_date }}</td>
+        </tr>
+
+ <tr class="tr_1">
+        <td class="td_2">Կարգավիճակ</td>
+        <td>{{ Assembled_request.status_id.get_FIELD_display }}</td>
+        </tr>
+
+  <tr class="tr_1">
+        <td class="td_2">Ստորաբաժանման/ՏԳՂ/ կողմից հաստատում</td>
+        <td>{{ Assembled_request.approved_date_head }}</td>
+        </tr>
+  <tr class="tr_1">
+        <td class="td_2">Ադմինի կողմից հաստատում</td>
+        <td>{{ Assembled_request.approved_date_admin }}</td>
+        </tr>
+
+<tr class="tr_1">
+        <td class="td_2">Ֆին բաժնի կողմից հաստատում</td>
+        <td>{{ Assembled_request.approved_date_fin }}</td>
+        </tr>
+
+<tr class="tr_1">
+        <td class="td_2">Տնօրենի/տեղակալի կողմից հաստատում</td>
+        <td>{{ Assembled_request.approved_date_CEO_DCEO }}</td>
+        </tr>
+<tr class="tr_1">
+        <td class="td_2">Մեկնաբանություն</td>
+        <td>{{ Assembled_request.comment}}</td>
+        </tr>
+
+    </table>
+{% endblock %}

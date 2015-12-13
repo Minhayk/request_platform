@@ -1,0 +1,9 @@
+{% extends 'requests/base.html' %}
+{% block content %}
+    <h2>Նոր պահանջագիր</h2>
+    <form method="POST" class="request">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+{% endblock content %}
